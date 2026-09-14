@@ -3,13 +3,12 @@ layout: homepage
 ---
 
 ## About Me
-I am a first-year PhD student in Computer Science at *University of Haifa*, supervised by Amos Korman and Emanuele Natale. My research sits at the intersection of algorithms and the natural sciences, focusing on **Complex Systems** and **Distributed Computing**, particularly their manifestations in biological contexts. My toolkit includes classical algorithmic and probabilistic methods from theoretical computer science, with a touch of machine learning, helping algorithms see what pen and paper can’t.
+I am a first-year PhD student in Computer Science at *University of Haifa* and *Université Côte d'Azur*, supervised by Amos Korman and Emanuele Natale. My research began at the intersection of algorithms and the natural sciences, with a focus on complex systems and distributed computing, particularly as they arise in biological settings. More recently, I have started investigating a new kind of collective system: populations of AI agents interacting in strategic environments. I am particularly interested in the algorithms, communication protocols, and collective behaviors that emerge from these interactions.
 
-My previous projects include work on **succinct data structures** and **distributed deep learning**. Beyond my core research areas, I am broadly curious about **Dynamical Systems**, **Combinatorics**, **Games**, **Geometry**, and the interface between theory and real-world phenomena.
-
+My work draws on algorithmic and probabilistic methods from theoretical computer science, together with tools from machine learning. Previous projects include research on succinct data structures and distributed deep learning.
 ## Research Interests
+- **Collective Behavior in Multi-Agent AI Systems**
 - **Bio-inspired Algorithms**
-- **Complex Systems**
 
 ## News
 - **[Jun. 2025]** Our paper *Approximate 2-hop neighborhoods on incremental graphs: An efficient lazy approach* has been accepted to VLDB 2025 (London). 
