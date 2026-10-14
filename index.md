@@ -11,7 +11,11 @@ My work draws on algorithmic and probabilistic methods from theoretical computer
 - **Bio-inspired Algorithms**
 
 ## News
+- **[Nov. 2025]** I started a joint PhD in Computer Science at *Université Côte d’Azur* and the *University of Haifa*.
+- **[Oct. 2025]** Our paper *[Intermittent Cauchy walks enable optimal 3D search across target shapes and sizes](https://arxiv.org/abs/2603.10655)* was accepted for publication in *Proceedings of the National Academy of Sciences (PNAS)*.
 - **[Jun. 2025]** Our paper *Approximate 2-hop neighborhoods on incremental graphs: An efficient lazy approach* has been accepted to VLDB 2025 (London). 
 - **[Apr. 2025]** I'm starting a 6-months internship about *mathematical approaches to evolutionary neuroscience* and *distributed foraging hypothesis* at *INRIA* (France).
 - **[Nov. 2024]** I'm starting an internship about *Succint Data Structures* at *Tor Vergata University of Rome*.
 - **[Jul. 2024]** I'm starting an internship about *high-performance machine learning* at *Sapienza University*.
+
+{% include publications.md %}

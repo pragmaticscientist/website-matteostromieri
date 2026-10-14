@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 340" role="img" aria-labelledby="title desc">
+  <title id="title">Intermittent Cauchy search across different target geometries</title>
+  <desc id="desc">Original graphical illustration of the three target shapes considered in the paper: ball, disc, and line. Each shape is shown with a short search trajectory, symbolizing the robustness of a Cauchy walk with exponent mu equal to two.</desc>
+  <defs>
+    <linearGradient id="back" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbfc"/>
+      <stop offset="1" stop-color="#eaf2f4"/>
+    </linearGradient>
+    <linearGradient id="orb" x1=".2" y1=".1" x2=".9" y2="1">
+      <stop offset="0" stop-color="#9cdbcb"/>
+      <stop offset="1" stop-color="#258977"/>
+    </linearGradient>
+    <linearGradient id="disk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8cd9d1"/>
+      <stop offset="1" stop-color="#3a9b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-40%" width="160%" height="190%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#15435c" flood-opacity=".12"/>
+    </filter>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22" stroke="#b7ccd0" stroke-opacity=".28" stroke-width="1" fill="none"/>
+    </pattern>
+  </defs>
+
+  <rect width="600" height="340" rx="18" fill="url(#back)"/>
+  <rect width="600" height="340" fill="url(#grid)" opacity=".35"/>
+  <path d="M0 62H600" stroke="#d6e3e7"/>
+  <text x="142" y="35" fill="#153b58" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing=".4">CAUCHY WALKS</text>
+  <text x="572" y="35" fill="#247f77" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="end">μ = 2</text>
+
+  <!-- Three isometric search geometries -->
+  <g filter="url(#shadow)">
+    <rect x="26" y="79" width="172" height="220" rx="13" fill="#fff" opacity=".91"/>
+    <rect x="214" y="79" width="172" height="220" rx="13" fill="#fff" opacity=".91"/>
+    <rect x="402" y="79" width="172" height="220" rx="13" fill="#fff" opacity=".91"/>
+  </g>
+
+  <!-- BALL -->
+  <g>
+    <circle cx="112" cy="183" r="52" fill="url(#orb)"/>
+    <ellipse cx="112" cy="183" rx="19" ry="52" fill="none" stroke="#e7faf3" stroke-opacity=".52" stroke-width="2"/>
+    <ellipse cx="112" cy="183" rx="52" ry="18" fill="none" stroke="#e7faf3" stroke-opacity=".44" stroke-width="2"/>
+    <circle cx="95" cy="161" r="18" fill="#c3eee0" opacity=".37"/>
+    <path d="M44 230 L68 214 L77 155 L106 135 L143 175 L163 130 L178 124" stroke="#dd893b" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+    <circle cx="178" cy="124" r="5" fill="#dd893b" stroke="white" stroke-width="2"/>
+    <text x="112" y="278" text-anchor="middle" fill="#234963" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700">BALL</text>
+  </g>
+  <!-- DISC -->
+  <g>
+    <ellipse cx="300" cy="182" rx="66" ry="20" transform="rotate(-19 300 182)" fill="url(#disk)" stroke="#297f86" stroke-width="2"/>
+    <ellipse cx="300" cy="182" rx="41" ry="12" transform="rotate(-19 300 182)" fill="none" stroke="#bdeee6" stroke-width="2"/>
+    <path d="M235 230 L261 205 L273 140 L290 159 L308 127 L327 183 L360 123" fill="none" stroke="#dd893b" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="360" cy="123" r="5" fill="#dd893b" stroke="white" stroke-width="2"/>
+    <text x="300" y="278" text-anchor="middle" fill="#234963" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700">DISC</text>
+  </g>
+  <!-- LINE -->
+  <g>
+    <path d="M434 211 L551 143" stroke="#1e7e88" stroke-opacity=".25" stroke-width="18" stroke-linecap="round"/>
+    <path d="M434 211 L551 143" stroke="#48ada4" stroke-width="11" stroke-linecap="round"/>
+    <path d="M434 211 L551 143" stroke="#aae9dc" stroke-width="3" stroke-linecap="round"/>
+    <path d="M416 131 L439 157 L477 130 L481 199 L524 164 L550 204 L561 123" fill="none" stroke="#dd893b" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="561" cy="123" r="5" fill="#dd893b" stroke="white" stroke-width="2"/>
+    <text x="488" y="278" text-anchor="middle" fill="#234963" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700">LINE</text>
+  </g>
+  <text x="300" y="325" text-anchor="middle" fill="#567789" font-family="Inter,Arial,sans-serif" font-size="13" letter-spacing=".5">SCALE-INVARIANT SEARCH IN 3D</text>
+</svg>

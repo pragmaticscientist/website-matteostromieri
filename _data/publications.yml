@@ -1,4 +1,11 @@
 main:
+  - title: "Intermittent Cauchy walks enable optimal 3D search across target shapes and sizes"
+    authors: "<strong>Matteo Stromieri</strong>, Emanuele Natale, Amos Korman"
+    conference_short: "PNAS"
+    conference: "Proceedings of the National Academy of Sciences (PNAS)"
+    pdf: "https://arxiv.org/pdf/2603.10655"
+    image: "assets/img/cauchy-search-teaser.svg"
+    notes: "Accepted Oct. 2025"
   - title: "Approximate 2-hop neighborhoods on incremental graphs: An efficient lazy approach"
     authors: "Luca Becchetti, Andrea Clementi, Luciano Gualà, Luca Pepè Sciarria, Alessandro Straziota, Matteo Stromieri* (*Corresponding authors)"
     conference_short: "VLDB"
@@ -6,5 +13,5 @@ main:
     pdf: "https://arxiv.org/pdf/2502.19205"
     code: "https://github.com/Gnumlab/graph_ball"
     #bibtex: "https://bib.yliu.me/MICCAI23.txt"
-    image: "./assets/img/teaser_example_2.png"
+    image: "assets/img/teaser_example_2.png"
     notes: "To Appear"

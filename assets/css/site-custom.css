@@ -1,0 +1,140 @@
+/* Local refinements on top of Minimal Light: portrait and publications. */
+header .image.avatar {
+  display: block;
+  width: 188px;
+  max-width: 84%;
+  height: auto;
+  margin: 0 auto 22px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(24, 44, 58, 0.15);
+}
+
+header .image.avatar img {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  padding: 0;
+}
+
+/* A compact, image-led publication list, inspired by contemporary
+   academic publication pages. */
+.publications { margin-top: 22px; }
+.publications ol.bibliography {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.publications ol.bibliography li.publication-item {
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+.publication-entry {
+  display: grid;
+  grid-template-columns: 184px minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+  padding: 18px 0 22px;
+  border-bottom: 1px solid #e4e9ed;
+}
+.publications .publication-item:first-child .publication-entry { padding-top: 6px; }
+.publications .publication-item:last-child .publication-entry { border-bottom: none; }
+.publication-visual {
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+.publication-visual img {
+  display: block;
+  width: 100%;
+  height: 121px;
+  max-width: none;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #e1e9ee;
+  box-sizing: border-box;
+  background: #f2f5f7;
+}
+.publication-venue {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  padding: 2px 9px;
+  border-radius: 5px;
+  background: #073753;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: .035em;
+  line-height: 1.55;
+  box-shadow: 0 1px 5px rgba(0,0,0,.12);
+}
+.publication-details { min-width: 0; }
+.publications .publication-title {
+  color: #073753;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.29;
+  margin: 0 0 7px;
+}
+.publication-title a { color: inherit; }
+.publication-title a:hover { color: #257d98; }
+.publication-authors {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 3px;
+}
+.publication-journal {
+  color: #6a7480;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 0 0 10px;
+}
+.publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 9px;
+}
+.publication-actions a {
+  color: #164b6c;
+  display: inline-block;
+  border: 1px solid #c5d4dd;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font: 12px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-decoration: none;
+  transition: border-color 120ms ease, background 120ms ease;
+}
+.publication-actions a:hover,
+.publication-actions a:focus-visible {
+  border-color: #237d98;
+  background: #eef6f9;
+}
+.publication-status {
+  color: #987340;
+  font: 600 12px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@media screen and (max-width: 960px) {
+  header .image.avatar { width: 172px; margin-bottom: 18px; }
+}
+@media screen and (max-width: 560px) {
+  header .image.avatar { width: 152px; }
+  .publication-entry {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 19px 0;
+  }
+  .publication-visual { max-width: 265px; }
+  .publication-visual img { height: 142px; }
+  .publications .publication-title { font-size: 16px; }
+}
