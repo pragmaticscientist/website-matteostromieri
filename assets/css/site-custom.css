@@ -22,22 +22,32 @@ a:focus-visible { outline: 2px solid var(--site-accent); outline-offset: 3px; }
 header { width: 230px; padding-top: 66px; }
 header .image.avatar {
   display: block;
+  position: relative;
   width: 177px;
   max-width: 85%;
+  aspect-ratio: 1 / 1;
+  padding: 0;
   margin: 0 auto 20px;
   overflow: hidden;
   border-radius: 13px;
   border: 1px solid var(--site-line);
   box-shadow: none;
 }
+/* Override the Minimal Light theme's circular avatar and 20px image padding. */
+header .image.avatar::before { display: none !important; }
 header .image.avatar img {
+  position: absolute;
+  inset: 0;
   display: block;
-  width: 100%;
-  padding: 0;
-  aspect-ratio: 1;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
   object-fit: cover;
-  object-position: center;
-  border-radius: 12px;
+  object-position: 50% 40%;
+  border: 0;
+  border-radius: 0 !important;
 }
 header h1 {
   color: var(--site-ink);
