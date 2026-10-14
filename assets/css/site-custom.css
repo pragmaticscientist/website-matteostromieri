@@ -1,140 +1,173 @@
-/* Local refinements on top of Minimal Light: portrait and publications. */
+/* Minimal academic layout: one ink color, generous whitespace, no cards. */
+:root {
+  --site-ink: #26353d;
+  --site-muted: #68777e;
+  --site-accent: #285b65;
+  --site-line: #e7e9e8;
+  --global-theme-color: #285b65;
+  --global-hover-color: #285b65;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  background: #fff;
+  color: var(--site-ink);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--site-accent); }
+a:hover { color: #173f49; }
+a:focus-visible { outline: 2px solid var(--site-accent); outline-offset: 3px; }
+.wrapper { width: 990px; max-width: calc(100% - 60px); }
+
+/* Profile */
+header { width: 230px; padding-top: 66px; }
 header .image.avatar {
   display: block;
-  width: 188px;
-  max-width: 84%;
-  height: auto;
-  margin: 0 auto 22px;
-  border-radius: 20px;
+  width: 177px;
+  max-width: 85%;
+  margin: 0 auto 20px;
   overflow: hidden;
-  box-shadow: 0 6px 22px rgba(24, 44, 58, 0.15);
+  border-radius: 13px;
+  border: 1px solid var(--site-line);
+  box-shadow: none;
 }
-
 header .image.avatar img {
   display: block;
-  box-sizing: border-box;
   width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
+  padding: 0;
+  aspect-ratio: 1;
   object-fit: cover;
   object-position: center;
-  border-radius: 20px;
-  padding: 0;
+  border-radius: 12px;
+}
+header h1 {
+  color: var(--site-ink);
+  font-size: 29px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin: 0 0 12px;
+}
+header position { color: var(--site-ink); }
+header autocolor, header email { color: var(--site-muted); }
+header .social-icons a {
+  background: none;
+  border-radius: 0;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  margin-right: 7px !important;
+  color: var(--site-accent) !important;
+  transition: color .15s ease;
+}
+header .social-icons a:hover, header .social-icons a:focus-visible {
+  background: none;
+  color: var(--site-ink) !important;
+  transform: none;
 }
 
-/* A compact, image-led publication list, inspired by contemporary
-   academic publication pages. */
-.publications { margin-top: 22px; }
-.publications ol.bibliography {
-  list-style: none;
+/* Text */
+section {
+  float: right;
+  width: 672px;
+  padding: 62px 0 60px;
   margin: 0;
-  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
 }
-.publications ol.bibliography li.publication-item {
-  min-height: 0;
-  margin: 0;
+section p { line-height: 1.65; margin-bottom: 16px; }
+section strong { color: var(--site-ink); font-weight: 600; }
+section h2 {
+  color: var(--site-ink);
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 32px 0 13px;
   padding: 0;
+  border: 0;
 }
+section h2:first-child { margin-top: 0; }
+
+/* Research interests and news are straightforward lists. */
+#research-interests + ul { padding-left: 20px; margin: 0 0 24px; }
+#research-interests + ul li { padding-left: 2px; margin-bottom: 5px; }
+#news + ul { list-style: none; margin: 0 0 28px; padding: 0; }
+#news + ul li { margin-bottom: 12px; line-height: 1.55; }
+#news + ul strong { color: var(--site-ink); }
+
+/* Publications: compact text with optional original paper figures. */
+.publications { margin-top: 2px; }
+.publications ol.bibliography { list-style: none; margin: 0; padding: 0; }
+.publications ol.bibliography li.publication-item { min-height: 0; margin: 0; padding: 0; }
 .publication-entry {
   display: grid;
-  grid-template-columns: 184px minmax(0, 1fr);
+  grid-template-columns: 154px minmax(0, 1fr);
+  gap: 18px;
+  padding: 20px 0;
   align-items: start;
-  gap: 20px;
-  padding: 18px 0 22px;
-  border-bottom: 1px solid #e4e9ed;
+  border-top: 1px solid var(--site-line);
 }
-.publications .publication-item:first-child .publication-entry { padding-top: 6px; }
-.publications .publication-item:last-child .publication-entry { border-bottom: none; }
-.publication-visual {
-  position: relative;
-  margin: 0;
-  width: 100%;
-}
+.publication-entry--text-only { grid-template-columns: minmax(0, 1fr); }
+.publication-visual { margin: 2px 0 0; width: 100%; }
 .publication-visual img {
   display: block;
   width: 100%;
-  height: 121px;
-  max-width: none;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid #e1e9ee;
-  box-sizing: border-box;
-  background: #f2f5f7;
-}
-.publication-venue {
-  position: absolute;
-  top: 9px;
-  left: 9px;
-  padding: 2px 9px;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+  border: 1px solid var(--site-line);
   border-radius: 5px;
-  background: #073753;
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-weight: 700;
-  font-size: 11px;
-  letter-spacing: .035em;
-  line-height: 1.55;
-  box-shadow: 0 1px 5px rgba(0,0,0,.12);
+  padding: 3px;
+  background: white;
 }
+.publication-visual figcaption { font-size: 11px; line-height: 1.35; color: var(--site-muted); margin-top: 4px; }
+/* The journal is already written under each title; no overlaid label. */
+.publication-venue { display: none; }
 .publication-details { min-width: 0; }
 .publications .publication-title {
-  color: #073753;
-  font-size: 17px;
+  color: var(--site-ink);
+  font-size: 18px;
+  line-height: 1.34;
   font-weight: 600;
-  line-height: 1.29;
   margin: 0 0 7px;
 }
-.publication-title a { color: inherit; }
-.publication-title a:hover { color: #257d98; }
-.publication-authors {
-  font-size: 15px;
-  line-height: 1.4;
-  margin: 0 0 3px;
-}
-.publication-journal {
-  color: #6a7480;
-  font-style: italic;
-  font-size: 14px;
-  line-height: 1.45;
-  margin: 0 0 10px;
-}
-.publication-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 7px 9px;
-}
+.publications .publication-title a { color: inherit; }
+.publications .publication-title a:hover { color: var(--site-accent); }
+.publication-authors { font-size: 15px; line-height: 1.48; margin: 0 0 5px; }
+.publication-journal { font-size: 14px; line-height: 1.42; color: var(--site-muted); font-style: italic; margin: 0 0 8px; }
+.publication-actions { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 15px; }
 .publication-actions a {
-  color: #164b6c;
-  display: inline-block;
-  border: 1px solid #c5d4dd;
-  border-radius: 5px;
-  padding: 3px 10px;
-  font: 12px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  text-decoration: none;
-  transition: border-color 120ms ease, background 120ms ease;
+  display: inline;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font: 600 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--site-accent);
 }
-.publication-actions a:hover,
-.publication-actions a:focus-visible {
-  border-color: #237d98;
-  background: #eef6f9;
+.publication-actions a:hover, .publication-actions a:focus-visible {
+  background: none;
+  border: 0;
+  color: var(--site-ink);
 }
 .publication-status {
-  color: #987340;
-  font: 600 12px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--site-muted);
+  font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
-
 @media screen and (max-width: 960px) {
-  header .image.avatar { width: 172px; margin-bottom: 18px; }
+  body { padding: 26px; }
+  .wrapper { width: 100%; max-width: 100%; }
+  header { width: 100%; float: none; position: static; padding: 8px 0 30px; }
+  header .image.avatar { width: 164px; }
+  section { position: static; float: none; width: 100%; padding: 0 0 45px; margin: 0; }
 }
 @media screen and (max-width: 560px) {
-  header .image.avatar { width: 152px; }
-  .publication-entry {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 19px 0;
-  }
-  .publication-visual { max-width: 265px; }
-  .publication-visual img { height: 142px; }
-  .publications .publication-title { font-size: 16px; }
+  body { padding: 19px; }
+  header .image.avatar { width: 149px; }
+  section h2 { font-size: 22px; }
+  .publication-entry { grid-template-columns: 1fr; gap: 12px; }
+  .publication-visual { max-width: 230px; }
+  .publications .publication-title { font-size: 17px; }
 }
